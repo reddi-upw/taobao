@@ -1,0 +1,17 @@
+version: '3'
+services:
+  splash:
+    image: "scrapinghub/splash"
+    command: ["--max-timeout", "4000"]
+    ports:
+      - "5023:5023"
+      - "8050:8050"
+      - "8051:8051"
+  spider:
+    build: .
+    command: ["/usr/bin/scrapy", "crawl", "products", "-o", "urls.json"]
+    depends_on:
+      - splash
+    network_mode: host
+    volumes:
+      - .:/taobao

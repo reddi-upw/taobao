@@ -3,6 +3,6 @@ Taobao
 
 Simple scrapper for taobao.
 
-. code:: bash
+.. code:: bash
 
     $ docker-compose up -d

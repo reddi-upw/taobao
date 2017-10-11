@@ -1,6 +1,6 @@
 # Taobao
 
-Simple scrapper for taobao.
+Simple scraper for taobao.
 
 ```shell
 $ docker-compose up -d
